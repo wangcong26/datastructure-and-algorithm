@@ -13,6 +13,7 @@ public class Main
 		list.addLast(10);
 		list.addLast(20);
 		list.addLast(30);
+		list.addLast(40);
 		int[] array = list.toArray();
 		Arrays.toString(array);
 		System.out.println(Arrays.toString(array));
@@ -20,10 +21,10 @@ public class Main
 		// System.out.println(list.contains(10));
 
 		// list.removeFirst();
-		list.removeLast();
+		// list.removeLast();
 		System.out.println(list.contains(30));
 		System.out.println(list.size());
-
+		System.out.println(list.getKthFromTheEnd(-1));
 	}
 
 }

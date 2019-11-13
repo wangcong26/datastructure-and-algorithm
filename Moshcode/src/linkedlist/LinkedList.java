@@ -175,4 +175,29 @@ public class LinkedList
 		first = previous;
 	}
 
+	public int getKthFromTheEnd(int k)
+	{
+		if (isEmpty())
+			throw new IllegalStateException();
+		Node begin = this.first;
+		Node end = this.first;
+
+		int distance = k - 1;
+
+		for (int i = 0; i < distance; i++)
+		{
+			end = end.next;
+			if (end == null)
+				throw new IllegalArgumentException();
+		}
+
+		while (end != this.last)
+		{
+			begin = begin.next;
+			end = end.next;
+		}
+
+		return begin.value;
+	}
+
 }
