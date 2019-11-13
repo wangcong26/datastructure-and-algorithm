@@ -1,9 +1,15 @@
 package stack;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 public class BalancedString
 {
+	private final List<Character> leftBrackets = Arrays.asList('(', '<', '[', '{');
+	private final List<Character> rightBrackets = Arrays.asList(')', '>', ']', '{');
+
 	public boolean balance(String input)
 	{
 		Stack<Character> stack = new Stack<>();
@@ -29,12 +35,12 @@ public class BalancedString
 
 	private boolean isLeftBracket(char ch)
 	{
-		return ch == '[' || ch == '<' || ch == '{' || ch == '(';
+		return leftBrackets.contains(ch);
 	}
 
 	private boolean isRightBracket(char ch)
 	{
-		return ch == ']' || ch == '>' || ch == ')' || ch == '}';
+		return rightBrackets.contains(ch);
 	}
 
 	private boolean bracketMatch(char left, char right)

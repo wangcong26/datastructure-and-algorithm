@@ -23,7 +23,7 @@ public class Main
 		// Test the balanced string
 		// Edge cases
 		// (, ((), )(
-		String str = "{1+2}";
+		String str = "{1+2>";
 		BalancedString exp = new BalancedString();
 		boolean result = exp.balance(str);
 		System.out.println(result);
