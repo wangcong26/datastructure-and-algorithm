@@ -19,6 +19,15 @@ public class Main
 		String test = "abcd";
 		String test_reverse = reverser.reverse(test);
 		System.out.println(test_reverse);
+
+		// Test the balanced string
+		// Edge cases
+		// (, ((), )(
+		String str = "{1+2}";
+		BalancedString exp = new BalancedString();
+		boolean result = exp.balance(str);
+		System.out.println(result);
+
 	}
 
 }
