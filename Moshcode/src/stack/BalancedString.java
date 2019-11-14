@@ -23,8 +23,8 @@ public class BalancedString
 			{
 				if (stack.empty())
 					return false; // if string like this: )xhid(, then it's not balanced.
-				char top = stack.pop();
 
+				char top = stack.pop();
 				if (bracketMatch(top, ch))
 					return false;
 			}
@@ -45,8 +45,9 @@ public class BalancedString
 
 	private boolean bracketMatch(char left, char right)
 	{
-		return (right == ')' && left != '(') || (right == ']' && left != '[') || (right == '>' && left != '<')
-				|| (right == '}' && left != '{');
+		// (<[{
+		// )>]}
+		return leftBrackets.indexOf(left) == rightBrackets.indexOf(right);
 	}
 
 }
