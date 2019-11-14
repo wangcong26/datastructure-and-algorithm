@@ -46,4 +46,9 @@ public class MyStackClass
 		return array[count - 1];
 	}
 
+	public boolean isEmpty()
+	{
+		return count == 0;
+	}
+
 }

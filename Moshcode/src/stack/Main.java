@@ -36,7 +36,7 @@ public class Main
 		System.out.println(stack_test);
 		System.out.println(stack_test.pop());
 		System.out.println(stack_test.pop());
-		System.out.println(stack_test.pop());
+		System.out.println(stack_test.peek());
 	}
 
 }
