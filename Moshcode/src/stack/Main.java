@@ -33,6 +33,9 @@ public class Main
 		stack_test.push(100);
 		stack_test.push(200);
 		stack_test.push(300);
+		stack_test.push(400);
+		stack_test.push(500);
+		//stack_test.push(600); stack overflow because we set size of the stack to be 5
 		System.out.println(stack_test);
 		System.out.println(stack_test.pop());
 		System.out.println(stack_test.pop());
