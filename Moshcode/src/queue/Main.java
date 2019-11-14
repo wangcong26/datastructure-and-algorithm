@@ -12,12 +12,22 @@ public class Main
 		queue.add(10);
 		queue.add(20);
 		queue.add(30);
+		queue.add(40);
+		queue.add(50);
+		queue.add(60);
 		// int front = queue.remove();
 		System.out.println(queue);
 		reverse(queue);
-		//System.out.println(queue);
+		// System.out.println(queue);
 
-		// reverse a queue
+		// Test ArrayQueue
+		ArrayQueue queue_test = new ArrayQueue(5);
+		queue_test.enqueue(100);
+		queue_test.enqueue(200);
+		queue_test.enqueue(300);
+		int front = queue_test.dequeue();
+		System.out.println(front);
+		System.out.println(queue);
 	}
 
 	public static void reverse(Queue<Integer> queue)
@@ -28,9 +38,9 @@ public class Main
 		{
 			stack.push(queue.remove());
 		}
-		
+
 		System.out.println(stack);
-		
+
 		while (!stack.isEmpty())
 		{
 			queue.add(stack.pop());
