@@ -28,6 +28,15 @@ public class Main
 		boolean result = exp.balance(str);
 		System.out.println(result);
 
+		// Test Stack class
+		MyStackClass stack_test = new MyStackClass();
+		stack_test.push(100);
+		stack_test.push(200);
+		stack_test.push(300);
+		System.out.println(stack_test);
+		System.out.println(stack_test.pop());
+		System.out.println(stack_test.pop());
+		System.out.println(stack_test.pop());
 	}
 
 }
