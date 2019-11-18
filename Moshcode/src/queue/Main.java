@@ -26,8 +26,9 @@ public class Main
 		queue_test.enqueue(200);
 		queue_test.enqueue(300);
 		int front = queue_test.dequeue();
-		System.out.println(front);
-		System.out.println(queue);
+		System.out.println(queue_test);
+		queue_test.dequeue();
+		System.out.println(queue_test);
 	}
 
 	public static void reverse(Queue<Integer> queue)
