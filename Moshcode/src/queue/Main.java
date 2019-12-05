@@ -8,6 +8,7 @@ public class Main
 {
 	public static void main(String[] args)
 	{
+		// interface and implementation
 		Queue<Integer> queue = new ArrayDeque<>();
 		queue.add(10);
 		queue.add(20);
@@ -15,7 +16,7 @@ public class Main
 		queue.add(40);
 		queue.add(50);
 		queue.add(60);
-		// int front = queue.remove();
+		// int front = queue.remove(); // remove the element in the front using remove
 		System.out.println(queue);
 		reverse(queue);
 		// System.out.println(queue);
