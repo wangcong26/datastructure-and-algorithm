@@ -35,6 +35,7 @@ public class ArrayQueue
 		return item;
 	}
 
+	@Override
 	public String toString()
 	{
 		String result = Arrays.toString(items);
