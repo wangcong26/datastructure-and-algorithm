@@ -1,7 +1,9 @@
 package hashtable;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Main_find_nonrepeat
 {
@@ -15,6 +17,10 @@ public class Main_find_nonrepeat
 		String test = "ggood moorning";
 		char result = nonrepeat(test);
 		System.out.println(result);
+		
+		String test2 = "ggood moorning";
+		char result2 = findFirstRepeatedChar(test);
+		System.out.println(result2);
 	}
 
 	public static char nonrepeat(String word)
@@ -42,6 +48,19 @@ public class Main_find_nonrepeat
 			{
 				return s;
 			}
+		}
+		return Character.MIN_VALUE;
+	}
+	
+	public static char findFirstRepeatedChar(String str)
+	{
+		Set<Character> set = new HashSet<>();
+		for (char ch: str.toCharArray())
+		{
+			if (set.contains(ch))
+				return ch;
+			else
+				set.add(ch);
 		}
 		return Character.MIN_VALUE;
 	}

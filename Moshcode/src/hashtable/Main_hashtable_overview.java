@@ -36,6 +36,10 @@ public class Main_hashtable_overview
 		{
 			System.out.println(entry);
 		}
+		
+		// hashcode
+		String str = "orange";
+		System.out.println(str.hashCode());
 	}
 
 }
