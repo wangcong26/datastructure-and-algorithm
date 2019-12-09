@@ -10,10 +10,10 @@ public class HashTableShawn
 		private int key;
 		private String value;
 
-		public Entry(int k, String v)
+		public Entry(int key, String value)
 		{
-			this.key = k;
-			this.value = v;
+			this.key = key;
+			this.value = value;
 		}
 	}
 
@@ -43,8 +43,43 @@ public class HashTableShawn
 
 	}
 
+	public String get(int key)
+	{
+		int index = hash(key);
+		LinkedList<Entry> bucket = entries[index];
+		if (bucket != null)
+		{
+			for (Entry entry : bucket)
+			{
+				if (entry.key == key)
+					return entry.value;
+			}
+		}
+		return null;
+	}
+
+	public void remove(int key)
+	{
+		int index = hash(key);
+		LinkedList<Entry> bucket = entries[index];
+		if (bucket == null)
+			throw new IllegalStateException();
+
+		for (Entry entry : bucket)
+		{
+			if (entry.key == key)
+			{
+				bucket.remove(entry);
+				return;
+			}
+		}
+		throw new IllegalStateException();
+
+	}
+
 	private int hash(int key)
 	{
+		// reduce to the size of array
 		return key % entries.length;
 	}
 
